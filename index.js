@@ -1,38 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const { graphqlExpress, graphiqlExpress } = require("apollo-server-express");
-const { makeExecutableSchema } = require("graphql-tools");
+const schema = require("./schema");
 
 const GRAPHQL_PORT = 3000;
-
-// Some fake data
-const users = [
-  {
-    email: "iqb@gmail.com",
-    name: "Pafúncio de Souza"
-  },
-  {
-    email: "fsantos@unemat.br",
-    name: "Fulano Santos"
-  }
-];
-
-// The GraphQL schema in string form
-const typeDefs = `
-  type Query { users: [User] }
-  type User { email: String!, name: String }
-`;
-
-// The resolvers
-const resolvers = {
-  Query: { users: () => users }
-};
-
-// Put together a schema
-const schema = makeExecutableSchema({
-  typeDefs,
-  resolvers
-});
 
 // Initialize the app
 const app = express();
