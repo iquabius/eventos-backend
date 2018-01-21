@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --watch src",
+    "seed": "knex seed:run",
+    "migrate": "knex migrate:latest",
     "start": "node index.js"
   },
   "keywords": [],
@@ -16,9 +18,11 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "graphql": "^0.12.3",
-    "graphql-tools": "^2.18.0"
+    "graphql-tools": "^2.18.0",
+    "knex": "^0.14.2"
   },
   "devDependencies": {
-    "nodemon": "^1.14.11"
+    "nodemon": "^1.14.11",
+    "sqlite3": "^3.1.13"
   }
 }
