@@ -7,11 +7,13 @@ exports.seed = function(knex, Promise) {
       return knex('users').insert([
         {
           email: "iqb@gmail.com",
-          name: "Pafúncio de Souza"
+          name: "Pafúncio de Souza",
+          password: "dev123"
         },
         {
           email: "fsantos@unemat.br",
-          name: "Fulano Santos"
+          name: "Fulano Santos",
+          password: "dev123"
         }
       ]);
     });

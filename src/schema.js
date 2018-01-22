@@ -10,7 +10,8 @@ const typeDefs = `
   type User {
     id: ID!,
     email: String!,
-    name: String
+    name: String,
+    password: String!,
   }
 `;
 
