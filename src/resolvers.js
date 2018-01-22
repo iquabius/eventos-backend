@@ -12,5 +12,11 @@ module.exports = {
         .select()
         .table("users")
         .then(rows => rows || [])
+  },
+  Mutation: {
+    createUser: (_root, data, _ctx) =>
+      knex('users')
+        .insert(data)
+        .then(([id]) => Object.assign({ id }, data))
   }
 };

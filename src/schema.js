@@ -7,6 +7,11 @@ const typeDefs = `
     user(id: ID!): User
     users: [User]
   }
+
+  type Mutation {
+    createUser(name: String, email: String!, password: String!): User
+  }
+
   type User {
     id: ID!,
     email: String!,
