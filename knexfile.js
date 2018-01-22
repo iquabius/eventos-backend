@@ -14,6 +14,7 @@ module.exports = {
     connection: {
       filename: './database/dev.sqlite3',
     },
+    debug: true,
     useNullAsDefault: true,
     migrations,
     seeds
