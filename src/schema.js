@@ -3,8 +3,15 @@ const resolvers = require("./resolvers");
 
 // The GraphQL schema in string form
 const typeDefs = `
-  type Query { users: [User] }
-  type User { email: String!, name: String }
+  type Query {
+    user(id: ID!): User
+    users: [User]
+  }
+  type User {
+    id: ID!,
+    email: String!,
+    name: String
+  }
 `;
 
 // Put together a schema
