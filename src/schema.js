@@ -4,8 +4,8 @@ const resolvers = require("./resolvers");
 // The GraphQL schema in string form
 const typeDefs = `
   type Query {
-    user(id: ID!): User
-    users: [User]
+    getUser(id: ID!): User
+    allUsers: [User]
   }
 
   type Mutation {
